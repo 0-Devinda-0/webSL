@@ -1,0 +1,285 @@
+*{
+    margin: 0%;
+    font-family: 'Poppins', sans-serif;  
+    text-decoration: none; 
+    
+}
+html{
+    scroll-behavior: smooth;
+}
+
+/* Buttons */
+#main{
+    background-color: #4adede;
+    ;
+    padding:10px 25px 10px 25px;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    color: white;
+    font-weight: 600;
+    display: inline;
+    float: left;
+    margin-left:10%;
+    margin-top: 0.2em;
+    transition: 0.3s;
+
+}
+#main:hover{
+    background-color: #00a2b8;
+}
+
+#secondary{
+    background-color: transparent;
+    padding:9px 19px 8px 19px;
+    border: solid 2px;
+    border-radius: 10px;
+    font-size: 20px;
+    color: white;
+    font-weight: 600;
+    display: inline;
+    float: left;
+    margin-left:2%;
+    margin-top: 0.2em;
+    transition: 0.3s;
+}
+#secondary:hover{
+    border-color: #03e0fd;
+}
+
+.container{
+    height: 100vh;
+    width: 100%;
+    background-image: url(Images/image1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: 1s;
+    position: inherit;
+    
+
+    animation-name: animate;
+    animation-direction: alternate-reverse;
+    animation-duration: 30s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-timing-function: ease-in-out;
+    background-image:linear-gradient(rgba(0,0,0, 1),rgba(0,0,0, 0)) 
+}
+@keyframes animate {
+    0%{
+        background-image: url(Images/image1.jpg);
+ 
+    }25%{
+        background-image: url(Images/image2.jpg);
+    }50%{
+        background-image: url(Images/image3.jpg);
+    }75%{
+        background-image: url(Images/image4.jpg);
+    }100%{
+        background-image: url(Images/image1.jpg);
+    }
+}
+
+nav{
+    display: flex;
+    padding: 4% 6%;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+   
+} 
+
+.navigation{
+    flex:1;
+    text-align: right;   
+}
+
+.navigation ul li{
+    list-style: none;
+    display: inline-block;
+    position: relative;
+    margin-right: 25px;
+   
+}
+
+.navigation ul li a{
+    text-decoration: none;
+    color: white;
+    
+}
+
+.navigation ul li::after{
+    content: '';
+    align-items: inherit;
+    height: 2px;
+    width: 0%;
+    background: #4adede;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: 0.4s;
+
+    
+}
+
+.navigation ul li:hover::after{
+    width: 100%;
+}
+
+
+/* heading decoration */
+.frontHeading {
+    color:white;
+    letter-spacing: 0.7em;
+    padding-top: 15%;
+    padding-left: 10%;
+}
+.frontHeading h1{
+    font-size: 70px;   
+}
+.frontHeading p{
+    font-size: 25px;
+    padding-bottom:10px ;
+    letter-spacing: 0.9em;
+}
+
+/*second page cards*/
+h2{
+    text-align: center;
+    font-size: 2em;
+    padding-top: 3vh;
+    padding-bottom: 25px;
+}
+.main{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px,1fr));
+    grid-row-gap: 8em;
+    margin-left: 90px;
+    margin-right: 40px;
+    margin-top:20px;  
+    
+}
+.card{
+    width: 90%;
+    height: 400px;
+    background-color: #ffffff;
+    border-radius: 25px;
+    box-shadow: 5px 5px 40px 0px rgb(228, 228, 228);  
+    transition: .5s; 
+}
+.card:hover{ 
+    background-color: #f3f3f3;
+    box-shadow: 1px 1px 20px 0px #4adede;
+    
+}
+
+.card p{
+    padding: 25px;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #4adede;
+    font-weight: 600;
+    font-size: 25px;
+    font-family: "Poppins";
+    
+}
+
+.image1,.image2,.image3,.image4,.image5,.image6,.image7,.image8,.image9{
+    height: 75%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    position: relative;
+    align-content: center;
+    
+}
+/* wesetern Province */
+.image1{
+    background-image: url('Images/image1.jpg');
+}
+/* estern Province */
+.image2{
+    background-image: url('Images/arugam-bay.jpg');
+}
+/* central Province */
+.image3{
+    background-image: url('Images/etmpleoftooth.jpg');
+}
+/* southern Province */
+.image4{
+    background-image: url('Images/image4.jpg');
+}
+/* sabaragamuwa Province */
+.image5{
+    background-image: url('Images/image5.jpg');
+}
+/* uva Province */
+.image6{
+    background-image: url('Images/image2.jpg');
+}
+/* northern Province */
+.image7{
+    background-image: url('Images/wilpattu.jpg');
+}
+/* North West Province */
+.image8{
+    background-image: url('Images/baththalangunduwa.jpg');
+}
+/* North Central Province */
+.image9{
+    background-image: url('Images/adamsPeak.jpg');
+}
+
+.cardHolder.active{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+#sd{
+    width: 150px;
+    height: auto;
+    align-self: center;
+    border-radius: 7px;
+}
+#section2{
+    background-color: rgb(245, 245, 245);
+}
+
+/* section3- footer */
+
+#section3{
+    font-weight: 300;
+    padding: 1em;
+    height: fit-content;
+    color: rgb(158, 158, 158);
+    background-color: rgb(9, 1, 51);
+    text-align: center;
+  }
+  .gridCap{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(200px,1fr));
+    
+  }
+  .footer p{
+    font-size: 0.8em;
+  }
+  .column {
+    margin-left: 1em;
+    text-align: left;
+   
+  }
+  
+  .column h5{
+    font-size: 20px;
+    font-weight: 600;
+    color:white;
+  }
+  #name{
+    font-size: 1em;
+    padding: 0.8em;
+    font-weight: 500;
+    color:white;
+  }

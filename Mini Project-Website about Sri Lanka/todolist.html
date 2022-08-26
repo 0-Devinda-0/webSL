@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;600;900&display=swap" rel="stylesheet">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="todoList.css" class="rel">
+</head>
+<body>
+    
+    <div id = "app">
+
+        <div class="items">
+            
+            <h1>To Do List</h1>
+            <div v-if="!editing">
+                <input type="text" v-model = "todo">
+                <input class="buttons" type="submit" value="Add" @click= "addTodo">
+                <!-- <button class="buttons" type="submit" value="Add" @click= "addTodo">Add</button> -->
+            </div>
+            <div v-else>
+                
+                <input type="text" v-model = "todo">
+                <input class="buttons" type="submit" value="Update" @click= "updateList">
+            </div>
+            <ul>
+                <li v-for="(todo, index) in todos">
+                {{ todo }}
+
+                    <button class="subButtons" @click="editItems(index,todo)">Edit</button>
+                    <button class="subButtons" @click = "removeItems(index)">Delete</button>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+    <script>
+        new Vue({
+            el: '#app',
+
+            data:{
+                editing: false,
+                todo: '',
+                todos:[],
+                selected:null
+
+            },
+
+            methods:{
+                addTodo(){
+                    this.todos.push(this.todo)
+                    this.todo = ' '
+                },
+                editItems(index, todo){
+                    this.editing = true
+                    this.todo = todo
+                    this.selected = index
+
+                },
+                updateList(index){
+                    this.todos.splice(this.selected,1,this.todo)
+                    this.todo = ''
+                    this.editing = false
+                },
+                removeItems(index){
+                    this.todos.splice(index,1)
+                }
+            }
+        })
+    </script>
+</body>
+</html>

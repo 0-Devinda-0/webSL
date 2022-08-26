@@ -1,0 +1,75 @@
+*{  margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+h1{
+    text-align: center;
+    padding: 1em;
+}
+/* background colours */
+.section_1{
+    background-color: rgb(243, 243, 243);
+    height: 600px;
+    padding: 20px;
+}
+.section_2{
+    background-color: rgb(243, 243, 243);
+    height: 600px;
+    padding: 20px;
+}
+h3{
+    margin-top: 1.5em;
+    font-size: 2em;
+    padding: 1em;
+}
+p{
+    margin: 1em;
+    font-size: 1.2em;
+    color: rgb(80, 80, 80);
+   
+}
+.mainImage_1{
+    float: left;
+    margin: 1em;
+    margin-right:4em;
+    width: auto;
+    height: 33em;
+    border-radius: 20px;
+}
+.mainImage_2{
+    float: right;
+    margin: 1em;
+    margin-right:4em;
+    width: auto;
+    height: 33em;
+    border-radius: 20px;
+
+}
+.icons{
+    width: 1em;
+    padding: 0.1em;
+    margin-left: 1em;
+    transition: 0.2s;
+}
+.icons:hover{
+    background-color: white;
+    border: 0.1em;
+    border-radius: 7px;
+    padding: 0.1em;
+}
+
+.pop{
+    position: relative;
+    transform: translateX(-50px);
+    opacity: 0;
+    transition: ease-in-out;
+    transition-duration: 500ms;
+}
+.pop.active{
+    transform: translateX(0);
+    opacity: 1;
+}
+hr{
+    margin-left:1em;
+    margin-right:1em;
+    margin-bottom:1em;
+}
